@@ -1,0 +1,34 @@
+<html>
+ <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial</title>
+  </head>
+<body>
+    <h3>Iris Species Classification</h3>
+    {% extends "template.html" %}
+    {% block content %}
+    
+    <h1> My First Try Using Flask </h1>
+    <p> Flask is Fun </p>
+    
+    
+<div>
+  <form action="/predict" method="POST">
+    <label for="seplen">Sepal Length</label>
+    <input type="number" step="0.01" id="seplen" name="seplen">
+    <br>
+    <label for="sepwid">Sepal Width</label>
+    <input type="number" step="0.01" id="sepwid" name="sepwid">
+    <br>
+    <label for="petlen">Petal Length</label>
+    <input type="number" step="0.01" id="petlen" name="petlen">
+    <br>
+    <label for="petwid">Petal Width</label>
+    <input type="number" step="0.01" id="petwid" name="petwid">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+{% endblock %}
+</body>
+</html>
